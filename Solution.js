@@ -21,8 +21,7 @@ var verticalTraversal = function (root) {
     if (root === null) {
         return [];
     }
-    const MIN_TREE_NODE_VALUE = -100;
-    const MAX_TREE_NODE_VALUE = 100;
+    const MAX_NUMBER_OF_TREE_NODES = 1000;
 
     let head_queuePairs = new Pair(root, 0);
     let tail_queuePairs = head_queuePairs;
@@ -30,8 +29,8 @@ var verticalTraversal = function (root) {
     map_vertical_levels.set(0, [root.val]);
     let countAddedNodes_horizontal_level = 1;
 
-    let minVertical = MAX_TREE_NODE_VALUE;
-    let maxVertical = MIN_TREE_NODE_VALUE;
+    let minVertical = MAX_NUMBER_OF_TREE_NODES;
+    let maxVertical = -MAX_NUMBER_OF_TREE_NODES;
 
 
     while (head_queuePairs !== null) {
