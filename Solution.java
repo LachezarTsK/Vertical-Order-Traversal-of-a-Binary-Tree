@@ -19,8 +19,7 @@ public class Solution {
             this.vertical_level = vertical_level;
         }
     }
-    final int MIN_TREE_NODE_VALUE = -100;
-    final int MAX_TREE_NODE_VALUE = 100;
+    final int MAX_NUMBER_OF_TREE_NODES = 1000;
 
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         if (root == null) {
@@ -34,8 +33,8 @@ public class Solution {
         map_vertical_levels.put(0, new ArrayList<>());
         map_vertical_levels.get(0).add(root.val);
 
-        int minVertical = MAX_TREE_NODE_VALUE;
-        int maxVertical = MIN_TREE_NODE_VALUE;
+        int minVertical = MAX_NUMBER_OF_TREE_NODES;
+        int maxVertical = -MAX_NUMBER_OF_TREE_NODES;
 
         while (!queue.isEmpty()) {
 
